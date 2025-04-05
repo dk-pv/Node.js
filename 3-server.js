@@ -63,3 +63,24 @@
 // SERVER.listen(PORT , () =>{
 //     console.log("server is run")
 // })
+
+
+
+
+
+
+
+
+
+
+
+const  HTTP = require('http')
+const PORT = 3005
+
+const SERVER = HTTP.createServer((request,response) =>{
+    response.writeHead(200, {'content-type' : 'plain/text'})
+    response.end("this my own server")
+})
+SERVER.listen(PORT , () =>{
+    console.log('server is running')
+})
