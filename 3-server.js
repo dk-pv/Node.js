@@ -88,3 +88,13 @@
 // SERVER.listen(PORT , () =>{
 //     console.log('server is running')
 // })
+
+
+
+
+
+const HTTP = require('http')
+HTTP.createServer((request , response) => {
+    response.write('hello http module')
+    response.end()
+}).listen(8080)

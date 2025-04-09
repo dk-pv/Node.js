@@ -16,5 +16,8 @@
   "main": "1-indro.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cli-color": "^2.0.4"
   }
 }
