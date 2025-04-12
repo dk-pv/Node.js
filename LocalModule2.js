@@ -48,3 +48,10 @@
 // }
 
 // module.exports = person
+
+
+
+
+const cl = require('cli-color')
+console.log(cl.red.bgWhite('hello world'))
+console.log('hy')

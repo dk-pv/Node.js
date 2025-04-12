@@ -1,5 +1,4 @@
 // import fs Module
-const { error } = require('console')
 const FS = require('fs')
 
 
@@ -46,9 +45,6 @@ const FS = require('fs')
 //         console.log('deleted the file');
 //     }
 // })
-
-
-
 
 
 
