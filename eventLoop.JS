@@ -4,3 +4,9 @@
 
 
 
+// Promise.resolve().then(() => console.log("this is promise.resolve 1"))
+// process.nextTick(() => console.log("this is process.next 1"))
+
+
+// Promise.reject().catch(() => console.log( 'wrong ||||'))
+// process.nextTick(() => console.log("this is the process.Next"))
