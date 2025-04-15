@@ -10,3 +10,11 @@
 
 // Promise.reject().catch(() => console.log( 'wrong ||||'))
 // process.nextTick(() => console.log("this is the process.Next"))
+
+setTimeout(()=>console.log("this is setTimeout") ,5000)
+Promise.reject().catch(() => console.log( 'wrong ||||'))
+process.nextTick(() => console.log("this is the process.Next"))
+
+
+
+
