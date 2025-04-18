@@ -25,3 +25,24 @@
 // readStream.on('end', () => {
 //   console.log('Finished reading.');
 // });
+
+
+
+// const HTTP = require('http')
+
+// const server =  HTTP.createServer((req , res) =>{
+//   res.writeHead(200 ,{'content-type' : 'plain/text'})
+//   res.write('this is my server')
+//   res.end()
+// })
+// server.listen(8080 , () =>{
+//   console.log('server is running')
+// })
+
+
+
+
+const add = (x,y) => {
+  return x+y
+}
+module.exports = add

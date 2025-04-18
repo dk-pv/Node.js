@@ -45,3 +45,24 @@
 //     console.log("hello good morning")
 // }
 // module.exports = sayHello
+
+
+
+// const add = require('./osModule')
+// const result = add(20 , 30)
+// console.log(`result is ${result}`)
+
+
+
+
+// const OS = require('os')
+// console.log(OS.type())
+// console.log(OS.hostname())
+
+
+
+const FS = require('fs')
+var readableStream = FS.createReadStream(__dirname + '/fsSample.txt', {encoding : 'utf-8'})
+readableStream.on('data',(chunksData) =>{
+    console.log('................................................' , chunksData)
+})

@@ -1,2 +1,1 @@
-name : danish
-place : manjeri
+hy good morning
