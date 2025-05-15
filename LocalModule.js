@@ -61,8 +61,28 @@
 
 
 
-const FS = require('fs')
-var readableStream = FS.createReadStream(__dirname + '/fsSample.txt', {encoding : 'utf-8'})
-readableStream.on('data',(chunksData) =>{
-    console.log('................................................' , chunksData)
-})
+// const FS = require('fs')
+// var readableStream = FS.createReadStream(__dirname + '/fsSample.txt', {encoding : 'utf-8'})
+// readableStream.on('data',(chunksData) =>{
+//     console.log('................................................' , chunksData)
+// })
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// const hello = () =>{
+//     console.log("hello good mornig")
+// }
+// module.exports = hello
+
+
+
+const oprations = (num1 , num2) =>{
+    console.log(`additiion result is = ${num1 + num2}`)
+    console.log(`substraction result is = ${num1 - num2}`)
+    console.log(`multiply/ result is = ${num1 * num2}`)
+    console.log(`givision result is = ${num1 / num2}`)
+}
+module.exports = oprations 

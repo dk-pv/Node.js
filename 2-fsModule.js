@@ -1,8 +1,8 @@
 // import fs Module
-const FS = require('fs')
+// const { error } = require('console')
+// const FS = require('fs')
 
-
-// read file and access 
+// read file and access
 
 // FS.readFile('./fsSample.txt', 'utf8' , (errorData , fileContent) =>{
 //     if (errorData){
@@ -11,9 +11,6 @@ const FS = require('fs')
 //         console.log(fileContent)
 //     }
 // })
-
-
-
 
 // write file
 
@@ -33,9 +30,6 @@ const FS = require('fs')
 //     }
 // })
 
-
-
-
 // delete file
 
 // FS.unlink('./FSsample3' , (errorData) =>{
@@ -46,44 +40,33 @@ const FS = require('fs')
 //     }
 // })
 
-
-
 //crete a folder
 
 // FS.mkdir('./newFOLDER', (errorDatar) =>{
 //     if(errorDatar){
-//         console.log(errorDatar , "error");        
+//         console.log(errorDatar , "error");
 //     }else{
 //         console.log('folder creted');
-        
+
 //     }
 // })
-
-
-
 
 // const fs = require('fs')
 // const fileContent =  fs.readFileSync('./write.txt' , "utf-8")
 // console.log(fileContent)
 
-
 // const buf = Buffer.from('hy iam danish fr0o0m manjeri');
-// console.log(buf); 
-
-
+// console.log(buf);
 
 // const BufferOfString =  Buffer.from("hy mister dsjon")
 // console.log(BufferOfString)
 
+// this is 2 way of reading a file
+// 1 - readFile() (asychronous non-blocking)
+// 2 - readFileSync() (sychrous blockig)
+// 3 - createReadStream()  (very large file ashychrious and non-blocking)
 
-  
-               // this is 2 way of reading a file 
-               // 1 - readFile() (asychronous non-blocking)
-               // 2 - readFileSync() (sychrous blockig)
-               // 3 - createReadStream()  (very large file ashychrious and non-blocking)
-
-
-                // 1 - readFile()
+// 1 - readFile()
 
 // const fs = require('fs')
 // try {
@@ -93,9 +76,7 @@ const FS = require('fs')
 //     console.log('error reading file' , error)
 // }
 
-
-
-            //2 - readFileSync() 
+//2 - readFileSync()
 
 // const fs = require('fs')
 // fs.readFile('./write.txt' , 'utf-8' , (err , data) =>{
@@ -107,9 +88,7 @@ const FS = require('fs')
 //     }
 // })
 
-
-
-                 // 3 - createReadStream() 
+// 3 - createReadStream()
 
 // const fs = require('fs')
 // const stream =  fs.createReadStream('./write.txt' , 'utf-8')
@@ -119,5 +98,47 @@ const FS = require('fs')
 // })
 // console.log("seconnd");
 
-
 /////////////////////////////////////////////////////////////////////////////////
+
+// write file
+
+// write a file  synchrnous version
+
+// const fs = require('fs')
+// fs.writeFileSync('./writeFile.txt' , "hello world")
+
+// write a file  asynchrnous version
+// const fs = require('fs')
+// fs.writeFile("./write2" , "danish"  , (error) =>{
+//     if(error){
+//         console.log(error)
+//     }else{
+//         console.log("file written")
+//     }
+// })
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// append data (adding data in a file)
+
+// append the data asychronous  = appenFile()
+// const fs = require('fs')
+// fs.appendFile("./write3" , "Danish" ,  {flag : 0},() =>{
+
+// })
+
+// fs.appendFileSync('./write3 ' , "i'm drom manjeri")
+
+///////////////////////////////////////////////////////////////////////////////
+
+// unlink or delete a file
+
+const fs = require("fs");
+fs.unlink("./write3", () => {});
+
+try {
+  fs.unlinkSync("./write.txt");
+  console.log("file deleted");
+} catch (errorData) {
+  console.log("error", error);
+}

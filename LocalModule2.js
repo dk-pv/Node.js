@@ -52,6 +52,16 @@
 
 
 
-const cl = require('cli-color')
-console.log(cl.red.bgWhite('hello world'))
-console.log('hy')
+// const cl = require('cli-color')
+// console.log(cl.red.bgWhite('hello world'))
+// console.log('hy')
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const hello = require ('./LocalModule')
+// hello()
+
+
+const addition = require ('./LocalModule')
+addition( 1000000 , 5000)
