@@ -145,9 +145,9 @@
 
 
 
-const FS = require('fs')
-const readData = FS.createReadStream(__dirname + '/large.txt',{encoding : 'utf-8'})
-const writeData = FS.createWriteStream(__dirname + '/dataBig2.txt' , {encoding : 'utf-8'})
+// const FS = require('fs')
+// const readData = FS.createReadStream(__dirname + '/large.txt',{encoding : 'utf-8'})
+// const writeData = FS.createWriteStream(__dirname + '/dataBig2.txt' , {encoding : 'utf-8'})
 
 // readData.on('data' , (chunks) =>{
 //   // console.log("this is the data --------------------------\n" , chunks)
@@ -159,4 +159,13 @@ const writeData = FS.createWriteStream(__dirname + '/dataBig2.txt' , {encoding :
 //   })
 // })
 
-readData.pipe(writeData)
+// readData.pipe(writeData)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+                           // create a file 
+
+
+const fs = require('fs')
+fs.writeFileSync('hello.txt' , "hello Danish");
