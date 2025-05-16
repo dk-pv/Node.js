@@ -133,12 +133,30 @@
 
 // unlink or delete a file
 
-const fs = require("fs");
-fs.unlink("./write3", () => {});
+// const fs = require("fs");
+// fs.unlink("./write3", () => {});
 
-try {
-  fs.unlinkSync("./write.txt");
-  console.log("file deleted");
-} catch (errorData) {
-  console.log("error", error);
-}
+// try {
+//   fs.unlinkSync("./write.txt");
+//   console.log("file deleted");
+// } catch (errorData) {
+//   console.log("error", error);
+// }
+
+
+
+const FS = require('fs')
+const readData = FS.createReadStream(__dirname + '/large.txt',{encoding : 'utf-8'})
+const writeData = FS.createWriteStream(__dirname + '/dataBig2.txt' , {encoding : 'utf-8'})
+
+// readData.on('data' , (chunks) =>{
+//   // console.log("this is the data --------------------------\n" , chunks)
+//   writeData.write(chunks, (err) =>{
+//     if(err){
+//       console.log("errooooor" , err)
+//     }
+//     console.log('data write successfully')
+//   })
+// })
+
+readData.pipe(writeData)
