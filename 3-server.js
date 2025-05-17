@@ -1,5 +1,4 @@
-
-                 // create a server in a simple way
+// create a server in a simple way
 
 // const http = require('http')
 // http.createServer((req , res) =>{
@@ -8,9 +7,6 @@
 //     console.log('server is running ')
 // })
 
-
-
-
 // const http = require('http')
 // http.createServer((request , responce) =>{
 //     responce.end('hy good mornig guys')
@@ -18,21 +14,12 @@
 //     console.log("server is running port : 3699")
 // })
 
-
-
 // const http = require('http')
 // http.createServer((req , res) =>{
 //     res.write("hy mister")
 //     res.end()
 
 // }).listen(3030 )
-
-
-
-
-
-
-
 
 // add html page has a server response
 
@@ -47,23 +34,29 @@
 //     console.log('server is created successfully ')
 // })
 
+// const http = require('http')
+// const fs = require('fs')
 
+// http.createServer((req , res)  =>{
+//     fs.readFile('./sample.html' , (err ,data) =>{
+//         if (err) {
+//             console.log('error' ,err)
+//         }else{
+//             console.log('data is added')
+//         }
+//         res.writeHead(200 , {'content-type' : 'text/html'})
+//         res.end(data)
+//     })
 
+// }).listen(5008 , () =>{
+//     console.log('sever is running')
+// })
 
-const http = require('http')
-const fs = require('fs')
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-http.createServer((req , res)  =>{
-    fs.readFile('./sample.html' , (err ,data) =>{
-        if (err) {
-            console.log('error' ,err)
-        }else{
-            console.log('data is added')
-        }
-        res.writeHead(200 , {'content-type' : 'text/html'})
-        res.end(data)
-    })
-   
-}).listen(5008 , () =>{
-    console.log('sever is running')
-})
+//
+
+const http = require("http");
+const requestHandler = require('./3-routes')
+const server = http.createServer(requestHandler);
+server.listen(5200);
