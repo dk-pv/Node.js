@@ -167,5 +167,69 @@
                            // create a file 
 
 
+// const fs = require('fs')
+// fs.writeFileSync('hello.txt' , "hello Danish");
+
+
+
+// const http = require('http')
+
+// http.createServer((req ,res) =>{
+//     res.writeHead(200,{"content-type" : "plain/text"})
+//     res.write('hello world')
+//     res.end()
+// }).listen(8520,() =>{
+//     console.log("server is running")
+// })
+
+
 const fs = require('fs')
-fs.writeFileSync('hello.txt' , "hello Danish");
+
+// fs.writeFile('myText.txt' , "hello this is my text page",(err) =>{
+//     if(err){
+//         console.log(err)
+//     }else{
+//         console.log("data added")
+//     }
+
+// })
+
+// try {
+//     fs.writeFileSync('mytext2.txt' , "this is my second text file")
+//     console.log("data addedd successfully")
+// } catch (error) {
+//     console.log("this is the error" , error)
+// }
+
+
+// fs.readFile('mytext2.txt' , 'utf-8',(err , data) =>{
+//     if(err){
+//         console.log("error" , err)
+//     }else{
+//         console.log(data)
+//     }
+// })
+
+// try {
+//     const data = fs.readFileSync('myText.txt' , 'utf-8')
+//     console.log(data)
+// } catch (error) {
+//     console.log(error)
+// }
+
+// fs.unlink('mytext2.txt' , (err) =>{
+//     if (err) {
+//         console.log(err , "there is noo file exists")
+//     }else{
+//         console.log("file delete successfully")
+//     }
+// })
+
+// try {
+//     fs.unlinkSync('fsSample.txt')
+//     console.log("file delete succeffully")
+// } catch (error) {
+//     console.log(error) 
+// }
+
+
